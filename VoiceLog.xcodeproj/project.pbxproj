@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EEA948B32F057A0B00DE3BF4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EEA948B22F057A0000DE3BF4 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EEE993F82F025C4A00824252 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +28,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EEA948B22F057A0000DE3BF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EEE993E82F025C4400824252 /* VoiceLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE993F72F025C4A00824252 /* VoiceLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE994012F025C4A00824252 /* VoiceLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF662C52F06715700290AF5 /* VoiceLog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "VoiceLog-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EEE993EA2F025C4400824252 /* VoiceLog */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceLog;
-			sourceTree = "<group>";
-		};
 		EEE993FA2F025C4A00824252 /* VoiceLogTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = VoiceLogTests;
@@ -43,6 +44,26 @@
 		EEE994042F025C4A00824252 /* VoiceLogUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = VoiceLogUITests;
+			sourceTree = "<group>";
+		};
+		EEE994152F02639D00824252 /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = App;
+			sourceTree = "<group>";
+		};
+		EEE994172F0263DD00824252 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EEE9941B2F0264B700824252 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EEE994202F02651A00824252 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +96,15 @@
 		EEE993DF2F025C4400824252 = {
 			isa = PBXGroup;
 			children = (
-				EEE993EA2F025C4400824252 /* VoiceLog */,
+				EEF662C52F06715700290AF5 /* VoiceLog-Info.plist */,
+				EEA948B22F057A0000DE3BF4 /* .gitignore */,
+				EEE994152F02639D00824252 /* App */,
+				EEE9941B2F0264B700824252 /* Core */,
+				EEE994172F0263DD00824252 /* Features */,
+				EEE993E92F025C4400824252 /* Products */,
+				EEE994202F02651A00824252 /* Resources */,
 				EEE993FA2F025C4A00824252 /* VoiceLogTests */,
 				EEE994042F025C4A00824252 /* VoiceLogUITests */,
-				EEE993E92F025C4400824252 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +134,10 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EEE993EA2F025C4400824252 /* VoiceLog */,
+				EEE994152F02639D00824252 /* App */,
+				EEE994172F0263DD00824252 /* Features */,
+				EEE9941B2F0264B700824252 /* Core */,
+				EEE994202F02651A00824252 /* Resources */,
 			);
 			name = VoiceLog;
 			packageProductDependencies = (
@@ -212,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA948B32F057A0B00DE3BF4 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +430,11 @@
 				DEVELOPMENT_TEAM = 74PQQSFBKK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VoiceLog-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラで撮影して日記に追加するために使用します";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "音声ログを録音するためにマイクを使用";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "写真を日記に追加するために使用します";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "音声を文字に起こして日記として保存する";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +467,11 @@
 				DEVELOPMENT_TEAM = 74PQQSFBKK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VoiceLog-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラで撮影して日記に追加するために使用します";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "音声ログを録音するためにマイクを使用";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "写真を日記に追加するために使用します";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "音声を文字に起こして日記として保存する";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
