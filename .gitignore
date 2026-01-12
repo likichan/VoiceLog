@@ -9,4 +9,9 @@ Package.resolved
 
 # macOS
 .DS_Store
+DerivedData/
+*.xcuserstate
+xcuserdata/
+Breakpoints_v2.xcbkptlist
+*.env
 
